@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi</title>
+    <link rel="stylesheet" href="../static/bootstrap.css">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+</head>
+
+<body style="background-image: url({{url_for('static',filename='seis2.jpg') }});background-size:cover;">
+   
+    <div class='container'>
+        <!--Judul Dashboard-->
+        <!-- <a class='text-decoration-none text-secondary' href="{{url_for('welcome')}}"> -->
+            <h1 class="text-center text-capitalize display-4 my-5">
+                Prediksi Kerusakan Bangunan
+            </h1>
+        <!-- </a> -->
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item font-weight-bold">
+                <a class="nav-link text-dark lead" href="{{url_for('cat_fn', nav=True)}}">Histogram & Boxplot</a>
+            </li>
+            <li class="nav-item font-weight-bold">
+                <a class="nav-link text-dark lead" href="{{url_for('pie_fn')}}">Piechart</a>
+            </li>
+            <li class="nav-item font-weight-bold">
+                <a class="nav-link text-dark lead" href="{{url_for('pred_lr')}}">Predict</a>
+            </li>
+            <li class="nav-item font-weight-bold">
+                <a class="nav-link text-dark lead" href="{{url_for('about')}}">About</a>
+            </li>
+        </ul>
+
+        {% block content %} {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
